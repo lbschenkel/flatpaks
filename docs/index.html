@@ -1,0 +1,74 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>lbschenkel's Flatpaks</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+  <header>
+    <h1><a href="https://github.com/lbschenkel">lbschenkel</a>'s Flatpaks</h1>
+  </header>
+  <main>
+    <p>
+      This is a Flatpak repository for some applications that I use and
+      are not available in Flathub for various reasons.
+    </p>
+    <p class="notice">
+      <strong>ℹ️ Early adopters:</strong>
+      This repository is new and the signing key is short-lived on purpose,
+      read <a href="#key-expiry-notice">the notice below</a> for details.
+    </p>
+    <h2>Adding the repository</h2>
+    <p>
+      Download and open this file:
+      <a href="lbschenkel.flatpakrepo">lbschenkel.flatpakrepo</a>
+    </p>
+    <p>
+      Or via command-line:
+      <pre>flatpak remote-add lbschenkel https://lbschenkel.github.io/flatpaks/lbschenkel.flatpakrepo</pre>
+    </p>
+    <h2>Applications</h2>
+    <p>
+      The Flatpaks have minimal permissions by default (usually no network and
+      can only read/write to <code>~/Downloads</code>); if that is not enough
+      you should give more permissions via an override.
+      Check each individual app README for details.
+    </p>
+    Calculators:
+    <ul>
+      <li>
+        <a href="https://github.com/lbschenkel/free42-flatpak/blob/main/README.md">Free42</a>
+        — HP-42 calculator simulator
+      </li>
+      <li>
+        <a href="https://github.com/lbschenkel/plus42-flatpak/blob/main/README.md">Plus42</a>
+        — <em>enhanced</em> HP-42 calculator simulator
+      </li>
+    </ul>
+    Infrared / remote controls:
+    <ul>
+      <li>
+        <a href="https://github.com/lbschenkel/irscrutinizer-flatpak/blob/main/README.md">IrScrutinizer</a>
+        — powerful program for capturing, generating, analyzing, importing, and exporting of infrared (IR) signals
+      </li>
+      <li>
+        <a href="https://github.com/lbschenkel/remotemaster-flatpak/blob/main/README.md">RemoteMaster</a>
+        — upgrade code manager for UEI/JP1 remote controls
+      </li>
+    </ul>
+    <h2>Signing keys</h2>
+    <p>
+      This repository is signed with a key that I keep encrypted in my own hardware.
+      Binaries are built via GitHub Actions and I download and sign them manually.
+    </p>
+    <p id="key-expiry-notice">
+      ℹ️ Because this repository is very new, I'm deliberately keeping the
+      signing key short-lived until I'm confident with the whole setup.
+      I will extend the validity in a few weeks. If you add this repository now,
+      and later Flatpak complains that the key has expired, you will need to
+      remove and re-add the repository for Flatpak to take notice of the new
+      validity.
+    </p>
+  </main>
+</body>
+</html>
